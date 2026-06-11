@@ -21,7 +21,8 @@ pipeline {
             steps {
                 sh """
                    cat deployment.yaml
-                   sed -i 's|image: akuhub/register-app:.*|image: akuhub/register-app:1.0.0-${BUILD_NUMBER}|g' deployment.yaml
+                #   sed -i 's|image: akuhub/register-app:.*|image: akuhub/register-app:1.0.0-${BUILD_NUMBER}|g' deployment.yaml
+                   sed -i 's|image: akuhub/register-app:.*|image: akuhub/register-app:1.0.0-32|g' deployment.yaml
                    cat deployment.yaml
                 """
             }
