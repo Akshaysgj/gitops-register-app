@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: register-app-pipeline
-          image: akuhub/register-app:1.0.0-33
+          image: akuhub/register-app:1.0.0-34
           resources:
             limits:
               memory: "256Mi"
