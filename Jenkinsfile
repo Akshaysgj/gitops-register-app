@@ -33,7 +33,7 @@ pipeline {
                    git config --global user.name "Akshaysgj"
                    git config --global user.email "akshayunki544@gmail.com"
                    git add deployment.yaml
-                   git commit -m "Updated Deployment Manifest"
+                   git diff --cached --quiet || git commit -m "Updated Deployment Manifest"
                 """
                 withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
                   sh "git push https://github.com/Akshaysgj/gitops-register-app.git main"
